@@ -1,9 +1,25 @@
 <!DOCTYPE html>
-
+<html>
 <head>
 	<title>Contact form</title>
+	<!-- here we just include the javascript -->
+	<script src="popup.js"> </script>
 </head>
-
 <body>
-	<input type="text">
+	<!-- An action of # indicates that the form stays on the same page, simply suffixing the url with a #.
+		 Similar use occurs in anchors. <a href=#">Link</a> for example, will stay on the same page. -->
+	<form action="#">
+		Firstname: <input type="text" id="firstname"  ><br>
+		Name: <input type="text" id="name" ><br>
+		Age: <input type="number" id="age"><br>
+		Phone: <input type="tel" id="phone"><br>
+		Email: <input type="email" id="email"><br>
+		Student at 42 ? 
+		<input type="checkbox" id="student" value="yes" checked>Yes<br>
+		<input type="radio" name="gender" id="gender_male" value="male" checked> Male
+	  	<input type="radio" name="gender" id="gender_female" value="female"> Female
+	  	<input type="radio" name="gender" id="gender_other" value="other"> Other<br>
+		<input type="submit" onclick="displayFormContents();">
+	</form>
 </body>
+</html>
