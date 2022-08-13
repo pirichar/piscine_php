@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<HTML>
+
+<HEAD>
+  <TITLE>Periodic Table</TITLE>
+  <STYLE>
+    .element {
+      height: 60px;
+      width: 50px;
+      border: 5px solid black;
+    }
+    .hiddenelement {
+      height: 60px;
+      width: 50px;
+    }
+    .elem_weight {
+      margin: 1px;
+      text-align: right;
+      font-size: 10px;
+      margin-right: 2px;
+    }
+    .elem_symbol {
+      margin-top: 1px;
+      margin-bottom: 4px;
+      text-align: center;
+    }
+    .elem_number {
+      margin: 1px;
+      margin-left: 2px;
+      text-align: left;
+      font-size: 10px;
+    }
+  </STYLE>
+</HEAD>
+
+<BODY background="https://clickmica.fundaciondescubre.es/files/2016/12/mendeleiev-e1482864598223-768x449.jpg">
+  <table contentEditable="true">
+    <TR>
+      <TD>
+        <DIV class="element" STYLE="background: gold">
+          <p class="elem_weight">1.008</p>
+          <H2 class="elem_symbol">H</H2>
+          <p class="elem_number">1</p>
+        </DIV>
+      </TD>
+      <TD colspan="16" class="hidden"></TD>
+      <TD>
+        <DIV class="element" STYLE="background: green">
+          <p class="elem_weight">4.003</p>
+          <H2 class="elem_symbol">He</H2>
+          <p class="elem_number">2</p>
+        </DIV>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+        <DIV class="element" STYLE="background: gold">
+          <p class="elem_weight">6.941</p>
+          <H2 class="elem_symbol">Li</H2>
+          <p class="elem_number">3</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: cyan">
+          <p class="elem_weight">9.012</p>
+          <H2 class="elem_symbol">Be</H2>
+          <p class="elem_number">4</p>
+        </DIV>
+      </TD>
+      <TD colspan="10" class="hidden"></TD>
+      <TD>
+        <DIV class="element" STYLE="background: red">
+          <p class="elem_weight">10.811</p>
+          <H2 class="elem_symbol">B</H2>
+          <p class="elem_number">5</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: red">
+          <p class="elem_weight">12.011</p>
+          <H2 class="elem_symbol">C</H2>
+          <p class="elem_number">6</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: red">
+          <p class="elem_weight">14.007</p>
+          <H2 class="elem_symbol">N</H2>
+          <p class="elem_number">7</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: red">
+          <p class="elem_weight">15.999</p>
+          <H2 class="elem_symbol">O</H2>
+          <p class="elem_number">8</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: red">
+          <p class="elem_weight">18.998</p>
+          <H2 class="elem_symbol">F</H2>
+          <p class="elem_number">9</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: green">
+          <p class="elem_weight">20.18</p>
+          <H2 class="elem_symbol">Ne</H2>
+          <p class="elem_number">10</p>
+        </DIV>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+        <DIV class="element" STYLE="background: gold">
+          <p class="elem_weight">22.99</p>
+          <H2 class="elem_symbol">Na</H2>
+          <p class="elem_number">11</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: cyan">
+          <p class="elem_weight">24.305</p>
+          <H2 class="elem_symbol">Mg</H2>
+          <p class="elem_number">12</p>
+        </DIV>
+      </TD>
+      <TD colspan="10" class="hidden"></TD>
+      <TD>
+        <DIV class="element" STYLE="background: rgb(107,111,199)">
+          <p class="elem_weight">26.982</p>
+          <H2 class="elem_symbol">Al</H2>
+          <p class="elem_number">13</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: red">
+          <p class="elem_weight">28.086</p>
+          <H2 class="elem_symbol">Si</H2>
+          <p class="elem_number">14</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: red">
+          <p class="elem_weight">30.974</p>
+          <H2 class="elem_symbol">P</H2>
+          <p class="elem_number">15</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: red">
+          <p class="elem_weight">32.065</p>
+          <H2 class="elem_symbol">S</H2>
+          <p class="elem_number">16</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: red">
+          <p class="elem_weight">35.453</p>
+          <H2 class="elem_symbol">Cl</H2>
+          <p class="elem_number">17</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: green">
+          <p class="elem_weight">39.948</p>
+          <H2 class="elem_symbol">Ar</H2>
+          <p class="elem_number">18</p>
+        </DIV>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+        <DIV class="element" STYLE="background: gold">
+          <p class="elem_weight">39.098</p>
+          <H2 class="elem_symbol">K</H2>
+          <p class="elem_number">19</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: cyan">
+          <p class="elem_weight">40.078</p>
+          <H2 class="elem_symbol">Ca</H2>
+          <p class="elem_number">20</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: magenta">
+          <p class="elem_weight">44.956</p>
+          <H2 class="elem_symbol">Sc</H2>
+          <p class="elem_number">21</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: magenta">
+          <p class="elem_weight">47.867</p>
+          <H2 class="elem_symbol">Ti</H2>
+          <p class="elem_number">22</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: magenta">
+          <p class="elem_weight">50.942</p>
+          <H2 class="elem_symbol">V</H2>
+          <p class="elem_number">23</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: magenta">
+          <p class="elem_weight">51.996</p>
+          <H2 class="elem_symbol">Cr</H2>
+          <p class="elem_number">24</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: magenta">
+          <p class="elem_weight">54.938</p>
+          <H2 class="elem_symbol">Mn</H2>
+          <p class="elem_number">25</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: magenta">
+          <p class="elem_weight">55.845</p>
+          <H2 class="elem_symbol">Fe</H2>
+          <p class="elem_number">26</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: magenta">
+          <p class="elem_weight">58.933</p>
+          <H2 class="elem_symbol">Co</H2>
+          <p class="elem_number">27</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: magenta">
+          <p class="elem_weight">58.693</p>
+          <H2 class="elem_symbol">Ni</H2>
+          <p class="elem_number">28</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: magenta">
+          <p class="elem_weight">63.546</p>
+          <H2 class="elem_symbol">Cu</H2>
+          <p class="elem_number">29</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: magenta">
+          <p class="elem_weight">65.38</p>
+          <H2 class="elem_symbol">Zn</H2>
+          <p class="elem_number">30</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: rgb(107,111,199)">
+          <p class="elem_weight">69.723</p>
+          <H2 class="elem_symbol">Ga</H2>
+          <p class="elem_number">31</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: rgb(107,111,199)">
+          <p class="elem_weight">72.64</p>
+          <H2 class="elem_symbol">Ge</H2>
+          <p class="elem_number">32</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: red">
+          <p class="elem_weight">74.922</p>
+          <H2 class="elem_symbol">As</H2>
+          <p class="elem_number">33</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: red">
+          <p class="elem_weight">78.96</p>
+          <H2 class="elem_symbol">Se</H2>
+          <p class="elem_number">34</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: red">
+          <p class="elem_weight">79.904</p>
+          <H2 class="elem_symbol">Br</H2>
+          <p class="elem_number">35</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: green">
+          <p class="elem_weight">83.798</p>
+          <H2 class="elem_symbol">Kr</H2>
+          <p class="elem_number">36</p>
+        </DIV>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+        <DIV class="element" STYLE="background: gold">
+          <p class="elem_weight">85.468</p>
+          <H2 class="elem_symbol">Rb</H2>
+          <p class="elem_number">37</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: cyan">
+          <p class="elem_weight">87.62</p>
+          <H2 class="elem_symbol">Sr</H2>
+          <p class="elem_number">38</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: magenta">
+          <p class="elem_weight">88.906</p>
+          <H2 class="elem_symbol">Y</H2>
+          <p class="elem_number">39</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: magenta">
+          <p class="elem_weight">91.224</p>
+          <H2 class="elem_symbol">Zr</H2>
+          <p class="elem_number">40</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: magenta">
+          <p class="elem_weight">92.906</p>
+          <H2 class="elem_symbol">Nb</H2>
+          <p class="elem_number">41</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: magenta">
+          <p class="elem_weight">95.96</p>
+          <H2 class="elem_symbol">Mo</H2>
+          <p class="elem_number">42</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: magenta">
+          <p class="elem_weight">98</p>
+          <H2 class="elem_symbol">Tc</H2>
+          <p class="elem_number">43</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: magenta">
+          <p class="elem_weight">101.07</p>
+          <H2 class="elem_symbol">Ru</H2>
+          <p class="elem_number">44</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: magenta">
+          <p class="elem_weight">102.906</p>
+          <H2 class="elem_symbol">Rh</H2>
+          <p class="elem_number">45</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: magenta">
+          <p class="elem_weight">106.42</p>
+          <H2 class="elem_symbol">Pd</H2>
+          <p class="elem_number">46</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: magenta">
+          <p class="elem_weight">107.868</p>
+          <H2 class="elem_symbol">Ag</H2>
+          <p class="elem_number">47</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: magenta">
+          <p class="elem_weight">112.411</p>
+          <H2 class="elem_symbol">Cd</H2>
+          <p class="elem_number">48</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: rgb(107,111,199)">
+          <p class="elem_weight">114.818</p>
+          <H2 class="elem_symbol">In</H2>
+          <p class="elem_number">49</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: rgb(107,111,199)">
+          <p class="elem_weight">118.71</p>
+          <H2 class="elem_symbol">Sn</H2>
+          <p class="elem_number">50</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: rgb(107,111,199)">
+          <p class="elem_weight">121.76</p>
+          <H2 class="elem_symbol">Sb</H2>
+          <p class="elem_number">51</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: red">
+          <p class="elem_weight">127.6</p>
+          <H2 class="elem_symbol">Te</H2>
+          <p class="elem_number">52</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: red">
+          <p class="elem_weight">126.904</p>
+          <H2 class="elem_symbol">I</H2>
+          <p class="elem_number">53</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: green">
+          <p class="elem_weight">131.293</p>
+          <H2 class="elem_symbol">Xe</H2>
+          <p class="elem_number">54</p>
+        </DIV>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+        <DIV class="element" STYLE="background: gold">
+          <p class="elem_weight">132.905</p>
+          <H2 class="elem_symbol">Cs</H2>
+          <p class="elem_number">55</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: cyan">
+          <p class="elem_weight">137.327</p>
+          <H2 class="elem_symbol">Ba</H2>
+          <p class="elem_number">56</p>
+        </DIV>
+      </TD>
+      <TD colspan="1" class="hidden"></TD>
+      <TD>
+        <DIV class="element" STYLE="background: magenta">
+          <p class="elem_weight">178.49</p>
+          <H2 class="elem_symbol">Hf</H2>
+          <p class="elem_number">72</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: magenta">
+          <p class="elem_weight">180.948</p>
+          <H2 class="elem_symbol">Ta</H2>
+          <p class="elem_number">73</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: magenta">
+          <p class="elem_weight">183.84</p>
+          <H2 class="elem_symbol">W</H2>
+          <p class="elem_number">74</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: magenta">
+          <p class="elem_weight">186.207</p>
+          <H2 class="elem_symbol">Re</H2>
+          <p class="elem_number">75</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: magenta">
+          <p class="elem_weight">190.23</p>
+          <H2 class="elem_symbol">Os</H2>
+          <p class="elem_number">76</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: magenta">
+          <p class="elem_weight">192.217</p>
+          <H2 class="elem_symbol">Ir</H2>
+          <p class="elem_number">77</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: magenta">
+          <p class="elem_weight">195.084</p>
+          <H2 class="elem_symbol">Pt</H2>
+          <p class="elem_number">78</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: magenta">
+          <p class="elem_weight">196.967</p>
+          <H2 class="elem_symbol">Au</H2>
+          <p class="elem_number">79</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: magenta">
+          <p class="elem_weight">200.59</p>
+          <H2 class="elem_symbol">Hg</H2>
+          <p class="elem_number">80</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: rgb(107,111,199)">
+          <p class="elem_weight">204.383</p>
+          <H2 class="elem_symbol">Tl</H2>
+          <p class="elem_number">81</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: rgb(107,111,199)">
+          <p class="elem_weight">207.2</p>
+          <H2 class="elem_symbol">Pb</H2>
+          <p class="elem_number">82</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: rgb(107,111,199)">
+          <p class="elem_weight">208.98</p>
+          <H2 class="elem_symbol">Bi</H2>
+          <p class="elem_number">83</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: rgb(107,111,199)">
+          <p class="elem_weight">210</p>
+          <H2 class="elem_symbol">Po</H2>
+          <p class="elem_number">84</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: red">
+          <p class="elem_weight">210</p>
+          <H2 class="elem_symbol">At</H2>
+          <p class="elem_number">85</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: green">
+          <p class="elem_weight">222</p>
+          <H2 class="elem_symbol">Rn</H2>
+          <p class="elem_number">86</p>
+        </DIV>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+        <DIV class="element" STYLE="background: gold">
+          <p class="elem_weight">223</p>
+          <H2 class="elem_symbol">Fr</H2>
+          <p class="elem_number">87</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: cyan">
+          <p class="elem_weight">226</p>
+          <H2 class="elem_symbol">Ra</H2>
+          <p class="elem_number">88</p>
+        </DIV>
+      </TD>
+      <TD colspan="1" class="hidden"></TD>
+      <TD>
+        <DIV class="element" STYLE="background: magenta">
+          <p class="elem_weight">261</p>
+          <H2 class="elem_symbol">Rf</H2>
+          <p class="elem_number">104</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: magenta">
+          <p class="elem_weight">262</p>
+          <H2 class="elem_symbol">Db</H2>
+          <p class="elem_number">105</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: magenta">
+          <p class="elem_weight">266</p>
+          <H2 class="elem_symbol">Sg</H2>
+          <p class="elem_number">106</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: magenta">
+          <p class="elem_weight">264</p>
+          <H2 class="elem_symbol">Bh</H2>
+          <p class="elem_number">107</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: magenta">
+          <p class="elem_weight">267</p>
+          <H2 class="elem_symbol">Hs</H2>
+          <p class="elem_number">108</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: magenta">
+          <p class="elem_weight">268</p>
+          <H2 class="elem_symbol">Mt</H2>
+          <p class="elem_number">109</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: magenta">
+          <p class="elem_weight">271</p>
+          <H2 class="elem_symbol">Ds</H2>
+          <p class="elem_number">110</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: magenta">
+          <p class="elem_weight">272</p>
+          <H2 class="elem_symbol">Rg</H2>
+          <p class="elem_number">111</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: magenta">
+          <p class="elem_weight">285</p>
+          <H2 class="elem_symbol">Cn</H2>
+          <p class="elem_number">112</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: rgb(107,111,199)">
+          <p class="elem_weight">284</p>
+          <H2 class="elem_symbol">Nh</H2>
+          <p class="elem_number">113</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: rgb(107,111,199)">
+          <p class="elem_weight">289</p>
+          <H2 class="elem_symbol">Fl</H2>
+          <p class="elem_number">114</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: rgb(107,111,199)">
+          <p class="elem_weight">288</p>
+          <H2 class="elem_symbol">Mc</H2>
+          <p class="elem_number">115</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: rgb(107,111,199)">
+          <p class="elem_weight">292</p>
+          <H2 class="elem_symbol">Lv</H2>
+          <p class="elem_number">116</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: red">
+          <p class="elem_weight">295</p>
+          <H2 class="elem_symbol">Ts</H2>
+          <p class="elem_number">117</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: green">
+          <p class="elem_weight">294</p>
+          <H2 class="elem_symbol">Og</H2>
+          <p class="elem_number">118</p>
+        </DIV>
+      </TD>
+    </TR>
+
+    <TR>
+      <TD>
+        <DIV class="hiddenelement">
+        </DIV>
+      </TD>
+    </TR>
+
+    
+    <TR>
+      <TD colspan="3" class="hidden"></TD>
+      <TD>
+        <DIV class="element" STYLE="background: blue">
+          <p class="elem_weight">138.905</p>
+          <H2 class="elem_symbol">La</H2>
+          <p class="elem_number">57</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: blue">
+          <p class="elem_weight">140.116</p>
+          <H2 class="elem_symbol">Ce</H2>
+          <p class="elem_number">58</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: blue">
+          <p class="elem_weight">140.908</p>
+          <H2 class="elem_symbol">Pr</H2>
+          <p class="elem_number">59</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: blue">
+          <p class="elem_weight">144.242</p>
+          <H2 class="elem_symbol">Nd</H2>
+          <p class="elem_number">60</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: blue">
+          <p class="elem_weight">145</p>
+          <H2 class="elem_symbol">Pm</H2>
+          <p class="elem_number">61</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: blue">
+          <p class="elem_weight">150.36</p>
+          <H2 class="elem_symbol">Sm</H2>
+          <p class="elem_number">62</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: blue">
+          <p class="elem_weight">151.964</p>
+          <H2 class="elem_symbol">Eu</H2>
+          <p class="elem_number">63</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: blue">
+          <p class="elem_weight">157.25</p>
+          <H2 class="elem_symbol">Gd</H2>
+          <p class="elem_number">64</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: blue">
+          <p class="elem_weight">158.925</p>
+          <H2 class="elem_symbol">Tb</H2>
+          <p class="elem_number">65</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: blue">
+          <p class="elem_weight">162.5</p>
+          <H2 class="elem_symbol">Dy</H2>
+          <p class="elem_number">66</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: blue">
+          <p class="elem_weight">164.93</p>
+          <H2 class="elem_symbol">Ho</H2>
+          <p class="elem_number">67</p>
+        </DIV>
+      </TD>
+
+      <TD>
+        <DIV class="element" STYLE="background: blue">
+          <p class="elem_weight">167.259</p>
+          <H2 class="elem_symbol">Er</H2>
+          <p class="elem_number">68</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: blue">
+          <p class="elem_weight">168.934</p>
+          <H2 class="elem_symbol">Tm</H2>
+          <p class="elem_number">69</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: blue">
+          <p class="elem_weight">173.054</p>
+          <H2 class="elem_symbol">Yb</H2>
+          <p class="elem_number">70</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: blue">
+          <p class="elem_weight">174.967</p>
+          <H2 class="elem_symbol">Lu</H2>
+          <p class="elem_number">71</p>
+        </DIV>
+      </TD>
+    </TR>
+    <TR>
+      <TD colspan="3" class="hidden"></TD>
+      <TD>
+        <DIV class="element" STYLE="background: orange">
+          <p class="elem_weight">227</p>
+          <H2 class="elem_symbol">Ac</H2>
+          <p class="elem_number">89</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: orange">
+          <p class="elem_weight">232.038</p>
+          <H2 class="elem_symbol">Th</H2>
+          <p class="elem_number">90</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: orange">
+          <p class="elem_weight">231.036</p>
+          <H2 class="elem_symbol">Pa</H2>
+          <p class="elem_number">91</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: orange">
+          <p class="elem_weight">238.029</p>
+          <H2 class="elem_symbol">U</H2>
+          <p class="elem_number">92</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: orange">
+          <p class="elem_weight">237</p>
+          <H2 class="elem_symbol">Np</H2>
+          <p class="elem_number">93</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: orange">
+          <p class="elem_weight">244</p>
+          <H2 class="elem_symbol">Pu</H2>
+          <p class="elem_number">94</p>
+        </DIV>
+      </TD>
+
+      <TD>
+        <DIV class="element" STYLE="background: orange">
+          <p class="elem_weight">243</p>
+          <H2 class="elem_symbol">Am</H2>
+          <p class="elem_number">95</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: orange">
+          <p class="elem_weight">247</p>
+          <H2 class="elem_symbol">Cm</H2>
+          <p class="elem_number">96</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: orange">
+          <p class="elem_weight">247</p>
+          <H2 class="elem_symbol">Bk</H2>
+          <p class="elem_number">97</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: orange">
+          <p class="elem_weight">251</p>
+          <H2 class="elem_symbol">Cf</H2>
+          <p class="elem_number">98</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: orange">
+          <p class="elem_weight">252</p>
+          <H2 class="elem_symbol">Es</H2>
+          <p class="elem_number">99</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: orange">
+          <p class="elem_weight">257</p>
+          <H2 class="elem_symbol">Fm</H2>
+          <p class="elem_number">100</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: orange">
+          <p class="elem_weight">258</p>
+          <H2 class="elem_symbol">Md</H2>
+          <p class="elem_number">101</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: orange">
+          <p class="elem_weight">259</p>
+          <H2 class="elem_symbol">No</H2>
+          <p class="elem_number">102</p>
+        </DIV>
+      </TD>
+      <TD>
+        <DIV class="element" STYLE="background: orange">
+          <p class="elem_weight">262</p>
+          <H2 class="elem_symbol">Lr</H2>
+          <p class="elem_number">103</p>
+        </DIV>
+      </TD>
+    </TR>
+
+  </table>
+</BODY>
+
+</HTML>
