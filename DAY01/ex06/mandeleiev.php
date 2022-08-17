@@ -32,7 +32,7 @@ while(!feof($info)){
 	$ELECTRON = explode(":", $s_line[4]);
 	$ELECTRON1 = trim($ELECTRON[1], "\n");
 	echo "
-		<td id=$ind;style=\"border: 1px solid black; padding:10px; id:$ind;\">
+		<td id=\"$ind\"style=\"border: 1px solid black; padding:10px;\">
 			<h4>$NAME[0]</h4>
     			<ul>
 					<li>No $NUMBER[1]</li>
